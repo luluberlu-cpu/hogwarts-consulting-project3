@@ -45,12 +45,13 @@ No raw data, link files, company-level results, or WRDS credentials are stored i
 4. Merged daily stock returns with the CRSP trading calendar on `date` (`ar = ret - vwretd`), set `day0` as the first trading day with `date >= rdq`, summed `ar` over trading days `[-1, 0, +1]`, and kept events with all 3 trading days present.
 
 ## Changes Since Project 2
-- **What was wrong / feedback:** Re-ran the Project 2 pipeline cleanly for SIC 60 and extended the exact same pipeline to comparison industry SIC 36, adding Welch's *t*-tests, winsorized OLS regressions, and cross-industry comparison figures.
-- **How we fixed it:** Standardized data filtering, verified date/lag alignment and sample funnel counts, deduplicated `(gvkey, datadate)` keys (removing 3 duplicate rows in SIC 36), and checked winsorized vs. un-winsorized regressions.
-- **How results changed:** Final sample sizes are **3,964** announcements for Depository Institutions (SIC 60) and **2,208** announcements for Electronic Equipment (SIC 36), with clear side-by-side comparisons across SUE tertiles.
+- **What was wrong / feedback:** I could not see any feedback on my project 2 code except that I should use Markdown.
+So I continued with this code for project 3 and re-ran the Project 2 pipeline cleanly for SIC 60 and extended the exact same pipeline to comparison industry SIC 36, adding Welch's *t*-tests, winsorized OLS regressions, and cross-industry comparison figures. I also delete the small part on JPM so there is no problem with the upload on github.
+
 
 ## Where the Code Came From & AI Usage
 Built from course lecture/assignment notebooks on CCM linking, SUE calculations, event-study CARs, *t*-tests, and OLS regressions in Python (`pandas`, `numpy`, `matplotlib`, `scipy`, `statsmodels`, `wrds`). Used AI assistance (including conversations in French) to structure the comparison workflow, check data types and merges, format plots, and refine presentation wording; all code and outputs were reviewed and executed end-to-end on WRDS JupyterHub.
+The conversation I used for Project 3 is here : https://share.gemini.google/gpx2pDIjL7tt
 
 ## Repository Structure
 - `README.md` — Project overview, findings, methodology, and changes log
