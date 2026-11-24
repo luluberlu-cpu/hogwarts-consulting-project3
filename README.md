@@ -9,18 +9,20 @@ Do larger quarterly earnings surprises (SUE) lead to higher 3-day abnormal stock
 ## Main Result & Figure 1
 High-surprise announcements earn higher average 3-day CARs than low-surprise announcements in both industries, with a much larger spread in Electronic Equipment (**+4.19 percentage points**, from **−2.01%** in Low SUE to **+2.18%** in High SUE) than in Depository Institutions (**+0.91 percentage points**, from **−0.13%** in Low SUE to **+0.78%** in High SUE).
 
-![Figure 1: Average 3-day CAR by SUE group](figures/figure1_groups.png)
+![Figure 1: Average 3-day CAR by SUE group](figures/Fig%201.png)
 
 ## Statistical Tests, Regression & Figure 2
 - **Welch's t-test (High vs. Low SUE):** The High-minus-Low gap is **+0.91 pp** in Depository Institutions (*t* = 4.58, *p* < 0.0001) and **+4.19 pp** in Electronic Equipment (*t* = 6.99, *p* < 0.0001), confirming that the group differences are statistically significant.
 - **OLS Regression (CAR on SUE):** In the regressions (`car_w ~ sue`, using 1% / 99% winsorized CAR and decimal variables), the slope on SUE is positive in both industries (*b* = 0.0486, *p* = 0.0045 in SIC 60; *b* = 0.0733, *p* = 0.0542 in SIC 36; *R²* = 0.002 in both). A higher earnings surprise goes with a higher average 3-day return, while *R²* is small because 3-day stock returns reflect many factors beyond year-over-year EPS surprises.
 
-![Figure 2: SUE vs. 3-day CAR scatter plot and regression lines](figures/figure2_regression.png)
+![Figure 2: SUE vs. 3-day CAR scatter plot and regression lines](figures/Fig%202.png)
+
+![Summary Table](figures/Table.png)
 
 ## Industry Comparison & Explanation (Figure 3)
 Electronic Equipment shows more than 4.5× the High-minus-Low spread of Depository Institutions and wider return swings (CAR standard deviation of 10.82% vs. 5.10%). Checking the share of loss-making quarters (`epspxq < 0`) across SUE groups shows that money-losing quarters are far more common in Electronic Equipment overall (**26.7%** vs. **2.5%** in Depository Institutions) and especially in the Low-SUE group (**46.1%** vs. **6.7%**). Frequent losses and higher earnings volatility in Electronic Equipment align with sharper stock reactions around announcements.
 
-![Figure 3: Share of loss-making quarters by SUE group](figures/figure3_why_differ.png)
+![Figure 3: Share of loss-making quarters by SUE group](figures/Fig%203.png)
 
 ## Business Advice, Limitation & Next Questions
 - **Advice for the client (JPMorgan Chase & Co.):** Benchmark bank announcement reactions against banking peers (~0.9 pp spread) rather than high-swing technology stocks, emphasize forward guidance on net interest income, credit quality, and capital plans, and treat loss quarters as a clear negative signal.
@@ -53,4 +55,4 @@ Built from course lecture/assignment notebooks on CCM linking, SUE calculations,
 ## Repository Structure
 - `README.md` — Project overview, findings, methodology, and changes log
 - `notebook/Bergeal_Lucas_Project3.ipynb` — Executed Jupyter notebook with all outputs
-- `figures/` — Saved figures for Slides 4–6 and the README
+- `figures/` — `Fig 1.png`, `Fig 2.png`, `Fig 3.png`, and `Table.png`
